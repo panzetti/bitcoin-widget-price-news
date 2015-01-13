@@ -8,7 +8,7 @@
     <style>
 		.container {
 			width:250px;
-			height:350px;
+			height:270px;
 			background-color:#E6E6E6;
 			font-family: 'Sintony', sans-serif;
 			border-radius:15px;
@@ -18,7 +18,7 @@
 		}
 		.container .price {
 			width:250px;
-			height:120px;
+			height:110px;
 		}
 		.container .price #header {
 			width:250px;
@@ -36,26 +36,11 @@
 			color:#FFFFFF;
 			font-weight:bold;
 		}
-		.container .news #header {
-			width:250px;
-			height:5px;
-			background-color:#777;
-			background-image:-webkit-gradient(linear, left top, left bottom, from(#777), to(#555));
-			background-image:-webkit-linear-gradient(top, #777, #555);
-			background-image:-moz-linear-gradient(top, #777, #555);
-			background-image:-ms-linear-gradient(top, #777, #555);
-			background-image:-o-linear-gradient(top, #777, #555);
-			background-image:linear-gradient(top, #777, #555);
-			text-align:center;
-			font-size:18px;
-			color:#FFFFFF;
-			font-weight:bold;
-		}
 		.container .price #title {
 			width:90px;
 			height:60px;
 			float:left;
-			margin:15px 15px 15px 25px;
+			margin:15px 15px 15px 15px;
 			font-size:18px;
 			font-weight:bold;
 		}
@@ -73,11 +58,29 @@
 			margin-top:5px;
 		}
 		.container .price .value {
-			width:100px;
+			width:115px;
 			height:60px;
 			float:right;
 			font-size:14px;
-			margin:15px 15px 15px 5px;
+			margin:15px 5px 15px 5px;
+		}
+		.container .price .value #item_value {
+			text-align:right;	
+		}
+		.container .news #header {
+			width:250px;
+			height:5px;
+			background-color:#777;
+			background-image:-webkit-gradient(linear, left top, left bottom, from(#777), to(#555));
+			background-image:-webkit-linear-gradient(top, #777, #555);
+			background-image:-moz-linear-gradient(top, #777, #555);
+			background-image:-ms-linear-gradient(top, #777, #555);
+			background-image:-o-linear-gradient(top, #777, #555);
+			background-image:linear-gradient(top, #777, #555);
+			text-align:center;
+			font-size:18px;
+			color:#FFFFFF;
+			font-weight:bold;
 		}
 		.container .news #item_news {
 			width:250px;
@@ -100,9 +103,15 @@
         <div class="news">
         	<div id="header"></div>
             <?php
+				$count=0;
 				foreach($rss->url as $entrada) {
 					$title=explode("/",$entrada->loc);
 					echo '<div id="item_news"><a href="'.$entrada->loc.'">'.str_replace("-"," ",$title[4]).'</a></div>';
+					if($count==3){
+						break;
+					} else {
+						$count++;
+					}
 				}
 			?>
         </div>
