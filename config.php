@@ -24,4 +24,11 @@
 	$btcFOXBIT_high = $btc_price[0];
 	$btcFOXBIT_low = $btc_price[1];
 	$btcFOXBIT_vol = $btc_price[2];
+	
+	//leitor rss Bitcoin News
+	
+	$url="http://www.bitcoinnews.com.br/sitemap-pt-post-".date("Y-m").".xml";
+	$feed = file_get_contents($url);
+	$rss = new SimpleXmlElement($feed);
+	
 ?>
