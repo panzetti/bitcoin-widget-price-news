@@ -25,7 +25,7 @@
 				$count=0;
 				foreach($rss->url as $entrada) {
 					$title=explode("/",$entrada->loc);
-					echo '<div id="item_news"><li><a href="'.$entrada->loc.'">'.str_replace("-"," ",$title[4]).'</a></li></div>';
+					echo '<div id="item_news"><li><a href="'.$entrada->loc.'">'.ucfirst(str_replace("-"," ",$title[4])).'</a></li></div>';
 					if($count==3){
 						break;
 					} else {
