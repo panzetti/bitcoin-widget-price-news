@@ -1,6 +1,7 @@
 .container {
-			width:250px;
-			height:270px;
+			width:270px;
+			height:auto;
+			max-height:275px;
 			background-color:#E6E6E6;
 			font-family: 'Sintony', sans-serif;
 			border-radius:15px;
@@ -10,12 +11,12 @@
 }
 
 .container .price {
-			width:250px;
+			width:270px;
 			height:110px;
 }
 
 .container .price #header {
-			width:250px;
+			width:270px;
 			height:30px;
 			background-color:#777;
 			background-image:-webkit-gradient(linear, left top, left bottom, from(#777), to(#555));
@@ -69,7 +70,7 @@
 }
 
 .container .news #header {
-			width:250px;
+			width:270px;
 			height:5px;
 			background-color:#777;
 			background-image:-webkit-gradient(linear, left top, left bottom, from(#777), to(#555));
@@ -86,6 +87,9 @@
 
 .container .news #item_news {
 			width:250px;
-			font-size:12px;
-			margin:5px;
+			font-size:13px;
+			margin:5px 2px 5px 5px;
+}
+.container .news ul {
+	margin:0px 2px 0px -23px;
 }
