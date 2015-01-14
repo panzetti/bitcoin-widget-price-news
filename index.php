@@ -6,6 +6,13 @@
 	<title>BTC-WIDGET</title>
     <link href='http://fonts.googleapis.com/css?family=Sintony' rel='stylesheet' type='text/css'>
 	<link href="css/btc.css" rel="stylesheet">
+    <link href="img/bitcoin.png" rel="icon" type="image/x-icon"/>
+    <script>
+    	function autoRefresh_div() {
+			$("body").load("config.php");
+		}
+		setInterval('autoRefresh_div()', 2000);
+	</script>		
 </head>
 <body>
 	<div class="container">
