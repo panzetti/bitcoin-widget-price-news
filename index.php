@@ -20,8 +20,8 @@
         	<div id="header">BTC Widget v1.0</div>
         	<div id="title"><p id="bitcoin">BITCOIN</p><p id="by">by</p><img src="img/foxbit.png"></div>
             <div class="value">
-				<div id="item_value">Alta:<font color="#FF0000"> R$ <?= $btcFOXBIT_high ?></font></div>
-				<div id="item_value">Baixa:<font color="#009900"> R$ <?= $btcFOXBIT_low ?></font></div>
+				<div id="item_value">Alta:<font color="#009900"> R$ <?= $btcFOXBIT_high ?></font></div>
+				<div id="item_value">Baixa:<font color="#FF0000"> R$ <?= $btcFOXBIT_low ?></font></div>
 				<div id="item_value">Vol: <font color="#FF9933"><?= $btcFOXBIT_vol ?> BTC</font></div>
             </div>
         </div>
